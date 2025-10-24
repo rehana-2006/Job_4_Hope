@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChildProtect - For Parents</title>
+    <link rel="stylesheet" href="../styles/parent.css"/>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <div class="logo-icon">♥</div>
+            <div class="logo-text">
+                <h1>Job4Hope</h1>
+                <p>Where job meets dream</p>
+            </div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#parents">For Parents</a></li>
+            <li><a href="#employers">For NGOs/Employers</a></li>
+            <li><a href="#protection">Child Protection</a></li>
+            <li><a href="#report">Report Incident</a></li>
+            <li><a href="#partners">Our Partners</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="#login" class="btn btn-login">Login</a>
+            <a href="#register" class="btn btn-register">Register</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Your Skills, Their Future: Find Empowering Work</h2>
+            <p>List your skills (e.g., cooking, tailoring, cleaning) to find fair-wage work opportunities and support your family.</p>
+            <button class="btn btn-primary" onclick="showPage('profile')">
+                👤 Create Your Profile
+            </button>
+        </div>
+        <div class="hero-image">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400'%3E%3Crect fill='%23ddd' width='600' height='400'/%3E%3Ctext x='50%25' y='50%25' font-size='20' text-anchor='middle' fill='%23666'%3EHistorical Work Image%3C/text%3E%3C/svg%3E" alt="Work">
+        </div>
+    </section>
+
+    <!-- Dashboard Tabs -->
+    <div class="dashboard-tabs">
+        <button class="tab active" onclick="showPage('browse')">
+            🔍 Browse Jobs
+        </button>
+        <button class="tab" onclick="showPage('applications')">
+            📋 My Applications
+        </button>
+        <button class="tab" onclick="showPage('profile')">
+            👤 My Profile
+        </button>
+    </div>
+
+    <!-- Browse Jobs Page -->
+    <div id="browse-page" class="page-section active">
+        <section class="search-section">
+            <h2>Find Job Opportunities</h2>
+            <div class="search-filters">
+                <input type="text" class="search-input" placeholder="Search jobs or organizations...">
+                <input type="text" class="search-input" placeholder="Location">
+                <select class="search-input">
+                    <option>Work Type</option>
+                    <option>Daily</option>
+                    <option>Weekly</option>
+                    <option>Monthly</option>
+                </select>
+                <button class="clear-filters">Clear Filters</button>
+            </div>
+
+            <div class="skills-filter-section">
+                <h3>Skills</h3>
+                <div class="skills-filter">
+                    <label class="skill-checkbox">
+                        <input type="checkbox"> Cooking
+                    </label>
+                    <label class="skill-checkbox">
+                        <input type="checkbox"> Tailoring
+                    </label>
+                    <label class="skill-checkbox">
+                        <input type="checkbox"> Cleaning
+                    </label>
+                    <label class="skill-checkbox">
+                        <input type="checkbox"> Domestic Work
+                    </label>
+                    <label class="skill-checkbox">
+                        <input type="checkbox"> Construction
+                    </label>
+                    <label class="skill-checkbox">
+                        <input type="checkbox"> Gardening
+                    </label>
+                    <label class="skill-checkbox">
+                        <input type="checkbox"> Teaching
+                    </label>
+                    <label class="skill-checkbox">
+                        <input type="checkbox"> Childcare
+                    </label>
+                    <label class="skill-checkbox">
+                        <input type="checkbox"> Food Service
+                    </label>
+                    <label class="skill-checkbox">
+                        <input type="checkbox"> Handicrafts
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <section class="job-listings">
+            <div class="job-card">
+                <span class="urgent-badge">Urgent</span>
+                <h3>Community Kitchen Cook</h3>
+                <p class="org-name">Save the Children</p>
+                <p class="job-description">Prepare nutritious meals for community feeding programs serving underprivileged children.</p>
+                
+                <div class="job-meta">
+                    <div class="job-meta-item">📍 Mumbai, Maharashtra</div>
+                    <div class="job-meta-item">⏰ Monthly</div>
+                    <div class="job-meta-item">⭐ ₹15,000/month</div>
+                    <div class="job-meta-item">📅 2 days ago</div>
+                </div>
+
+                <div class="opportunity-tags">
+                    <span class="tag">Cooking</span>
+                    <span class="tag">Food Safety</span>
+                </div>
+
+                <div class="job-actions">
+                    <button class="btn btn-apply">Apply Now</button>
+                    <button class="btn btn-view">View Details</button>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <h3>Tailoring Trainer</h3>
+                <p class="org-name">Bal Raksha Bharat</p>
+                <p class="job-description">Train other parents in basic tailoring skills as part of our skill development program.</p>
+                
+                <div class="job-meta">
+                    <div class="job-meta-item">📍 Delhi, India</div>
+                    <div class="job-meta-item">⏰ Weekly</div>
+                    <div class="job-meta-item">⭐ ₹8,000/month</div>
+                    <div class="job-meta-item">📅 1 week ago</div>
+                </div>
+
+                <div class="opportunity-tags">
+                    <span class="tag">Tailoring</span>
+                    <span class="tag">Teaching</span>
+                </div>
+
+                <div class="job-actions">
+                    <button class="btn btn-apply">Apply Now</button>
+                    <button class="btn btn-view">View Details</button>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <span class="urgent-badge">Urgent</span>
+                <h3>Cleaning Services Coordinator</h3>
+                <p class="org-name">Local NGO</p>
+                <p class="job-description">Coordinate cleaning services for office buildings and residential complexes.</p>
+                
+                <div class="job-meta">
+                    <div class="job-meta-item">📍 Pune, Maharashtra</div>
+                    <div class="job-meta-item">⏰ Daily</div>
+                    <div class="job-meta-item">⭐ ₹500/day</div>
+                    <div class="job-meta-item">📅 3 days ago</div>
+                </div>
+
+                <div class="opportunity-tags">
+                    <span class="tag">Cleaning</span>
+                    <span class="tag">Organization</span>
+                </div>
+
+                <div class="job-actions">
+                    <button class="btn btn-apply">Apply Now</button>
+                    <button class="btn btn-view">View Details</button>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <h3>Childcare Assistant</h3>
+                <p class="org-name">UNICEF Partner</p>
+                <p class="job-description">Assist in childcare centers while parents attend skill training sessions.</p>
+                
+                <div class="job-meta">
+                    <div class="job-meta-item">📍 Bangalore, Karnataka</div>
+                    <div class="job-meta-item">⏰ Daily</div>
+                    <div class="job-meta-item">⭐ ₹400/day</div>
+                    <div class="job-meta-item">📅 5 days ago</div>
+                </div>
+
+                <div class="opportunity-tags">
+                    <span class="tag">Childcare</span>
+                    <span class="tag">Teaching</span>
+                </div>
+
+                <div class="job-actions">
+                    <button class="btn btn-apply">Apply Now</button>
+                    <button class="btn btn-view">View Details</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- My Applications Page -->
+    <div id="applications-page" class="page-section">
+        <section class="applications-header">
+            <h2>My Applications</h2>
+        </section>
+
+        <section class="job-listings">
+            <div class="application-card">
+                <div class="application-info">
+                    <h3>Community Kitchen Cook</h3>
+                    <p class="org-name">Save the Children</p>
+                    <p class="applied-date">Applied 3 days ago</p>
+                </div>
+                <span class="status-badge status-pending">Pending</span>
+            </div>
+
+            <div class="application-card">
+                <div class="application-info">
+                    <h3>Cleaning Services</h3>
+                    <p class="org-name">Local NGO</p>
+                    <p class="applied-date">Applied 1 week ago</p>
+                </div>
+                <span class="status-badge status-accepted">Accepted</span>
+            </div>
+        </section>
+    </div>
+
+    <!-- My Profile Page -->
+    <div id="profile-page" class="page-section">
+        <section class="profile-form">
+            <h2>Create Your Profile</h2>
+            
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your full name">
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" placeholder="City, State">
+                </div>
+            </div>
+
+            <div class="checkbox-section">
+                <h3>Skills</h3>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox"> Cooking
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox"> Tailoring
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox"> Cleaning
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox"> Domestic Work
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox"> Construction
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox"> Gardening
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox"> Teaching
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox"> Childcare
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox"> Food Service
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox"> Handicrafts
+                    </label>
+                </div>
+            </div>
+
+            <div class="checkbox-section">
+                <h3>Availability</h3>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox"> Daily
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox"> Weekly
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox"> Monthly
+                    </label>
+                </div>
+            </div>
+
+            <button class="btn btn-save">Save Profile</button>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="logo">
+                    <div class="logo-icon">♥</div>
+                    <div class="logo-text">
+                        <h3>ChildProtect</h3>
+                        <p>Empowering Parents, Protecting Children</p>
+                    </div>
+                </div>
+                <p>Together, we can create a future where every child has the right to education and a safe childhood. Join our mission to end child labour through skill-based employment opportunities for parents.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#parents">For Parents</a></li>
+                    <li><a href="#employers">For NGOs/Employers</a></li>
+                    <li><a href="#protection">Child Protection</a></li>
+                    <li><a href="#report">Report Incident</a></li>
+                    <li><a href="#partners">Our Partners</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#data">Data Security & Privacy</a></li>
+                </ul>
+                <div class="footer-emergency">
+                    <h4>Emergency</h4>
+                    <p>Child Helpline: <strong>1098</strong></p>
+                    <p>Email: <strong>contact@childprotect.org</strong></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2024 ChildProtect. All rights reserved. Building a world free from child labour.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showPage(pageName) {
+            // Hide all pages
+            document.querySelectorAll('.page-section').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            // Remove active class from all tabs
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            
+            // Show selected page
+            document.getElementById(pageName + '-page').classList.add('active');
+            
+            // Add active class to clicked tab
+            event.target.closest('.tab').classList.add('active');
+        }
+    </script>
+</body>
+</html>

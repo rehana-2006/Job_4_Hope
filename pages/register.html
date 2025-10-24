@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - ChildProtect</title>
+    <link rel="stylesheet" href="../styles/register.css"/>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="#" class="logo">
+            <div class="logo-icon">♥</div>
+            <div class="logo-text">
+                <h1>Job4Hope</h1>
+                <p>Where job meets dreams</p>
+            </div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#parents">For Parents</a></li>
+            <li><a href="#employers">For NGOs/Employers</a></li>
+            <li><a href="#protection">Child Protection</a></li>
+            <li><a href="#report">Report Incident</a></li>
+            <li><a href="#partners">Our Partners</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <a href="#login" class="btn btn-login">Login</a>
+            <a href="#register" class="btn btn-register">Register</a>
+        </div>
+    </nav>
+
+    <!-- Register Section -->
+    <section class="register-section">
+        <div class="register-logo">
+            <div class="register-logo-icon">♥</div>
+            <h2>ChildProtect</h2>
+        </div>
+
+        <p class="register-subtitle">Create your account and join our mission</p>
+
+        <div class="register-card">
+            <h3>Create Account</h3>
+            <p>Join our platform to connect with work opportunities or find skilled parents</p>
+
+            <form>
+                <!-- User Type Selection -->
+                <div class="user-type-section">
+                    <h4>I am registering as:</h4>
+                    <div class="user-type-options">
+                        <div class="user-type-card selected">
+                            <input type="radio" name="userType" id="parent" checked>
+                            <div class="user-type-content">
+                                <h5>Parent seeking work</h5>
+                                <p>Find skill-based employment opportunities</p>
+                            </div>
+                        </div>
+                        <div class="user-type-card">
+                            <input type="radio" name="userType" id="employer">
+                            <div class="user-type-content">
+                                <h5>NGO / Employer</h5>
+                                <p>Post job opportunities and projects</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Basic Information -->
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email *</label>
+                        <input type="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Password *</label>
+                        <input type="password" placeholder="Minimum 6 characters" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Confirm Password *</label>
+                        <input type="password" placeholder="Confirm your password" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="Your contact number">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Location</label>
+                        <input type="text" placeholder="City, State">
+                    </div>
+                </div>
+
+                <!-- Skills & Experience Section -->
+                <div class="skills-section">
+                    <h4>Skills & Experience</h4>
+                    
+                    <label class="skills-label">Skills * (Select all that apply)</label>
+                    <div class="skills-grid">
+                        <div class="skill-checkbox">
+                            <input type="checkbox" id="cooking">
+                            <label for="cooking">Cooking</label>
+                        </div>
+                        <div class="skill-checkbox">
+                            <input type="checkbox" id="cleaning">
+                            <label for="cleaning">Cleaning</label>
+                        </div>
+                        <div class="skill-checkbox">
+                            <input type="checkbox" id="tailoring">
+                            <label for="tailoring">Tailoring/Sewing</label>
+                        </div>
+                        <div class="skill-checkbox">
+                            <input type="checkbox" id="gardening">
+                            <label for="gardening">Gardening</label>
+                        </div>
+                        <div class="skill-checkbox">
+                            <input type="checkbox" id="childcare">
+                            <label for="childcare">Childcare</label>
+                        </div>
+                        <div class="skill-checkbox">
+                            <input type="checkbox" id="teaching">
+                            <label for="teaching">Teaching/Tutoring</label>
+                        </div>
+                        <div class="skill-checkbox">
+                            <input type="checkbox" id="computer">
+                            <label for="computer">Computer Skills</label>
+                        </div>
+                        <div class="skill-checkbox">
+                            <input type="checkbox" id="handicrafts">
+                            <label for="handicrafts">Handicrafts</label>
+                        </div>
+                        <div class="skill-checkbox">
+                            <input type="checkbox" id="farming">
+                            <label for="farming">Farming</label>
+                        </div>
+                        <div class="skill-checkbox">
+                            <input type="checkbox" id="construction">
+                            <label for="construction">Construction</label>
+                        </div>
+                        <div class="skill-checkbox">
+                            <input type="checkbox" id="driving">
+                            <label for="driving">Driving</label>
+                        </div>
+                        <div class="skill-checkbox">
+                            <input type="checkbox" id="administrative">
+                            <label for="administrative">Administrative Work</label>
+                        </div>
+                    </div>
+
+                    <div class="form-grid" style="margin-top: 1.5rem;">
+                        <div class="form-group">
+                            <label>Experience Level</label>
+                            <select>
+                                <option>Select your experience level</option>
+                                <option>Beginner (0-1 years)</option>
+                                <option>Intermediate (1-3 years)</option>
+                                <option>Advanced (3-5 years)</option>
+                                <option>Expert (5+ years)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Availability</label>
+                            <select>
+                                <option>Select your availability</option>
+                                <option>Daily</option>
+                                <option>Weekly</option>
+                                <option>Monthly</option>
+                                <option>Flexible</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-create">Create Account</button>
+            </form>
+
+            <div class="divider"></div>
+
+            <p class="signin-link">
+                Already have an account? <a href="#login">Sign in here</a>
+            </p>
+        </div>
+
+        <div class="back-link">
+            <a href="#home">← Back to homepage</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="logo">
+                    <div class="logo-icon">♥</div>
+                    <div class="logo-text">
+                        <h3>ChildProtect</h3>
+                        <p style="margin-top: 0;">Empowering Parents, Protecting Children</p>
+                    </div>
+                </div>
+                <p>Together, we can create a future where every child has the right to education and a safe childhood. Join our mission to end child labour through skill-based employment opportunities for parents.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#parents">For Parents</a></li>
+                    <li><a href="#employers">For NGOs/Employers</a></li>
+                    <li><a href="#protection">Child Protection</a></li>
+                    <li><a href="#report">Report Incident</a></li>
+                    <li><a href="#partners">Our Partners</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#privacy">Privacy Policy</a></li>
+                    <li><a href="#terms">Terms of Service</a></li>
+                    <li><a href="#data">Data Security & Privacy</a></li>
+                </ul>
+                <div class="footer-emergency">
+                    <h4>Emergency</h4>
+                    <p>Child Helpline: <strong>1098</strong></p>
+                    <p>Email: <strong>contact@childprotect.org</strong></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Help Button -->
+    <button class="help-button" title="Help">?</button>
+
+    <script>
+        // User type card selection
+        document.querySelectorAll('.user-type-card').forEach(card => {
+            card.addEventListener('click', function() {
+                document.querySelectorAll('.user-type-card').forEach(c => c.classList.remove('selected'));
+                this.classList.add('selected');
+                this.querySelector('input[type="radio"]').checked = true;
+            });
+        });
+    </script>
+</body>
+</html>
