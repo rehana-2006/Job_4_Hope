@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./index.css"/>
 </head>
 <body>
-    <!-- Navigation -->
+   <!-- Navigation -->
     <nav>
         <div class="logo">
             <div class="logo-icon">♥</div>
@@ -18,11 +18,11 @@
         </div>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#parents">For Parents</a></li>
-            <li><a href="#employers">For NGOs/Employers</a></li>
+            <li><a href="#parents">Parents</a></li>
+            <li><a href="#employers">hiring team</a></li>
             <li><a href="#protection">Child Protection</a></li>
             <li><a href="#report">Report Incident</a></li>
-            <li><a href="#partners">Our Partners</a></li>
+            <li><a href="#partners">Partners</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -32,21 +32,63 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Registration Form -->
     <section class="hero" id="home">
         <div class="hero-content">
             <h2>End Child Labour: Skill-Based Employment for Parents</h2>
             <p>Connects parents with jobs and NGOs to secure stable income and ensure children stay in school.</p>
             <div class="hero-buttons">
-                <a href="#find-work" class="btn btn-primary">Find Work Now</a>
-                <a href="#post-job" class="btn btn-secondary">Post a Job/Project</a>
+                <a href="#opportunities" class="btn btn-primary">Find Work Now</a>
+                <a href="#protection" class="btn btn-secondary">Learn About Child Protection</a>
             </div>
         </div>
-        <div class="hero-image">
-            <div class="drawing-placeholder">
-                <div style="font-size: 3rem; margin-bottom: 1rem;">👨‍👩‍👧‍👦</div>
-                <h3>FAMILY</h3>
-            </div>
+
+        <!-- Registration Form -->
+        <div class="hero-form-container">
+            <h3>Create Account</h3>
+            <p>Join our platform to connect with work opportunities or find skilled parents</p>
+
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label>I am registering as *</label>
+                    <select id="userType" required>
+                        <option value="">Select your role</option>
+                        <option value="parent">Parent seeking work</option>
+                        <option value="employer">NGO / Employer</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Password *</label>
+                    <input type="password" placeholder="Minimum 6 characters" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="Your contact number">
+                </div>
+
+                <div class="form-group">
+                    <label>Location</label>
+                    <input type="text" placeholder="City, State">
+                </div>
+
+                <button type="submit" class="btn-create">Create Account</button>
+            </form>
+
+            <p class="signin-link">
+                Already have an account? <a href="#login">Sign in here</a>
+            </p>
         </div>
     </section>
 
@@ -75,7 +117,7 @@
     </section>
 
     <!-- Featured Opportunities -->
-    <section class="featured-opportunities">
+    <section class="featured-opportunities" id="opportunities">
         <h2>Featured Opportunities</h2>
         <p>Urgent and popular job listings from verified NGOs and employers</p>
         
@@ -146,7 +188,7 @@
     <section class="mission">
         <h2>Join Our Mission</h2>
         <p>Together, we can create a future where every child has the right to education and a safe childhood.</p>
-        <a href="#learn-more" class="btn btn-mission">🛡️ Learn More About Child Protection</a>
+        <a href="#protection" class="btn btn-mission">🛡️ Learn More About Child Protection</a>
     </section>
 
     <!-- Footer -->
@@ -167,11 +209,11 @@
                 <h4>Quick Links</h4>
                 <ul>
                     <li><a href="#home">Home</a></li>
-                    <li><a href="#parents">For Parents</a></li>
-                    <li><a href="#employers">For NGOs/Employers</a></li>
+                    <li><a href="#parents">Parents</a></li>
+                    <li><a href="#employers"> NGOs/Employers</a></li>
                     <li><a href="#protection">Child Protection</a></li>
                     <li><a href="#report">Report Incident</a></li>
-                    <li><a href="#partners">Our Partners</a></li>
+                    <li><a href="#partners"> Partners</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -186,7 +228,7 @@
                 </ul>
                 <div class="footer-emergency">
                     <h4>Emergency</h4>
-                    <p>Child Helpline: <strong>1098</strong></p>
+                    <p>Child Helpline: <strong>2006</strong></p>
                     <p>Email: <strong>contact@childprotect.org</strong></p>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-* {
+   * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -18,12 +18,16 @@
             padding: 1rem 5%;
             background: white;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .logo {
             display: flex;
             align-items: center;
             gap: 12px;
+            text-decoration: none;
         }
 
         .logo-icon {
@@ -41,6 +45,7 @@
         .logo-text h1 {
             font-size: 20px;
             font-weight: 600;
+            color: #000;
         }
 
         .logo-text p {
@@ -94,7 +99,7 @@
             background: linear-gradient(135deg, #e8f3f8 0%, #f0f0f0 100%);
             padding: 4rem 5%;
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 3rem;
         }
 
@@ -112,6 +117,7 @@
             font-size: 1.1rem;
             color: #666;
             margin-bottom: 2rem;
+            line-height: 1.6;
         }
 
         .hero-buttons {
@@ -132,32 +138,93 @@
             border: 1px solid #ddd;
         }
 
-        .hero-image {
+        /* Hero Form */
+        .hero-form-container {
             flex: 1;
-            background: #FFD700;
+            background: white;
             border-radius: 12px;
             padding: 2rem;
-            min-height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            max-width: 500px;
         }
 
-        .drawing-placeholder {
-            background: white;
-            border-radius: 8px;
-            padding: 2rem;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .drawing-placeholder h3 {
+        .hero-form-container h3 {
             font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-form-container > p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #d0d0d0;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            background: #f5f5f5;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #000;
+            background: white;
+        }
+
+        .form-group input::placeholder {
+            color: #999;
+        }
+
+        .btn-create {
+            width: 100%;
+            background: #000;
+            color: white;
+            padding: 0.9rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 0.5rem;
+        }
+
+        .btn-create:hover {
+            background: #333;
+        }
+
+        .signin-link {
+            text-align: center;
+            color: #666;
             margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .signin-link a {
+            color: #000;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .signin-link a:hover {
+            text-decoration: underline;
         }
 
         /* How We Help Section */
@@ -184,7 +251,6 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-top: 3rem;
         }
 
         .help-card {
@@ -440,264 +506,25 @@
             color: #666;
         }
 
-        /* Parent Dashboard Styles */
-        .dashboard-tabs {
-            display: flex;
-            background: #f5f5f5;
-            padding: 0 5%;
-            gap: 1rem;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .tab {
-            padding: 1rem 2rem;
-            background: transparent;
-            border: none;
-            cursor: pointer;
-            font-weight: 500;
-            border-bottom: 3px solid transparent;
-        }
-
-        .tab.active {
-            background: white;
-            border-bottom-color: #000;
-        }
-
-        .search-section {
-            padding: 2rem 5%;
-            background: white;
-        }
-
-        .search-filters {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr auto;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .search-input {
-            padding: 0.8rem;
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
-            font-size: 1rem;
-        }
-
-        .skills-filter {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .skill-checkbox {
-            display: flex;
-            align-items: center;
-            gap: 0.3rem;
-            padding: 0.5rem 1rem;
-            background: #f5f5f5;
-            border-radius: 20px;
-            cursor: pointer;
-        }
-
-        .job-listings {
-            padding: 2rem 5%;
-        }
-
-        .job-card {
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 1rem;
-        }
-
-        .job-meta {
-            display: flex;
-            gap: 2rem;
-            margin: 1rem 0;
-            color: #666;
-        }
-
-        .job-actions {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-
-        .btn-apply {
-            background: #000;
-            color: white;
-        }
-
-        .btn-view {
-            background: white;
-            color: #000;
-            border: 1px solid #e0e0e0;
-        }
-
-        /* Profile Form */
-        .profile-form {
-            padding: 2rem 5%;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group label {
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            padding: 0.8rem;
-            border: 1px solid #e0e0e0;
-            border-radius: 6px;
-            font-size: 1rem;
-        }
-
-        .form-group.full-width {
-            grid-column: 1 / -1;
-        }
-
-        .checkbox-group {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .btn-save {
-            width: 100%;
-            background: #000;
-            color: white;
-            padding: 1rem;
-            font-size: 1rem;
-        }
-
-        /* Employer Dashboard */
-        .employer-header {
-            background: linear-gradient(135deg, #f5e6f0 0%, #f0f0f0 100%);
-            padding: 3rem 5%;
-            text-align: center;
-        }
-
-        .employer-header h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .listings-grid {
-            padding: 2rem 5%;
-        }
-
-        .listing-card {
-            background: white;
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .listing-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-        }
-
-        .status-badge {
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-        }
-
-        .status-active {
-            background: #d4edda;
-            color: #155724;
-        }
-
-        .status-closed {
-            background: #f8d7da;
-            color: #721c24;
-        }
-
-        .listing-details {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin: 1.5rem 0;
-        }
-
-        .detail-item h4 {
-            font-size: 0.85rem;
-            color: #666;
-            margin-bottom: 0.3rem;
-        }
-
-        .listing-actions {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .btn-action {
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: 500;
-        }
-
-        .btn-delete {
-            color: #dc3545;
-            background: transparent;
-        }
-
         /* Responsive */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
+        @media (max-width: 968px) {
             .hero {
                 flex-direction: column;
             }
 
-            .help-cards,
-            .opportunities-grid,
-            .partners-grid {
-                grid-template-columns: 1fr;
+            .hero-form-container {
+                max-width: 100%;
+            }
+
+            .nav-links {
+                display: none;
             }
 
             .footer-content {
                 grid-template-columns: 1fr;
             }
 
-            .search-filters {
+            .opportunities-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .listing-details {
-                grid-template-columns: 1fr 1fr;
             }
         }
