@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChildProtect - For NGOs/Employers</title>
+    <link rel="stylesheet" href="../styles/hiring.css"/>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo-section">
+                <div class="logo">♥</div>
+                <div class="brand">
+                    <h1>ChildProtect</h1>
+                    <p>Empowering Parents, Protecting Children</p>
+                </div>
+            </div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#parents">For Parents</a>
+                <a href="#employers">For NGOs/Employers</a>
+                <a href="#protection">Child Protection</a>
+                <a href="#report">Report Incident</a>
+                <a href="#partners">Our Partners</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="auth-buttons">
+                <button class="btn-login">Login</button>
+                <button class="btn-register">Register</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Connect with Skilled Parents, Empower Communities</h2>
+        <p>Post your job opportunities and projects to reach parents eager for work, contributing to the fight against child labour.</p>
+        <button class="btn-primary">
+            <span>📋</span> Register Your Organisation
+        </button>
+    </section>
+
+    <div class="content">
+        <div class="tabs">
+            <button class="tab active" onclick="showSection('post')">
+                <span>✚</span> Post a Job
+            </button>
+            <button class="tab" onclick="showSection('listings')">
+                <span>📋</span> My Listings
+            </button>
+            <button class="tab" onclick="showSection('profile')">
+                <span>👥</span> Organization Profile
+            </button>
+        </div>
+
+        <!-- Post Job Form -->
+        <div id="post-section" class="form-container">
+            <h3>Post a New Opportunity</h3>
+            <form>
+                <div class="form-grid">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Job Title</label>
+                            <input type="text" placeholder="e.g., Community Kitchen Cook">
+                        </div>
+                        <div class="form-group">
+                            <label>Location</label>
+                            <input type="text" placeholder="City, State">
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Detailed Description</label>
+                        <textarea placeholder="Describe the job responsibilities, requirements, and any other relevant details..."></textarea>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Work Type</label>
+                            <select>
+                                <option>Select work type</option>
+                                <option>Full-time</option>
+                                <option>Part-time</option>
+                                <option>Contract</option>
+                                <option>Daily</option>
+                                <option>Weekly</option>
+                                <option>Monthly</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Estimated Wages/Compensation</label>
+                            <input type="text" placeholder="e.g., ₹500/day or ₹15,000/month">
+                        </div>
+                        <div class="form-group">
+                            <label>Contact Person</label>
+                            <input type="text" placeholder="Name for applicant contact">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Start Date</label>
+                            <input type="text" placeholder="dd-mm-yyyy">
+                        </div>
+                        <div class="form-group">
+                            <label>End Date (if applicable)</label>
+                            <input type="text" placeholder="dd-mm-yyyy">
+                        </div>
+                    </div>
+
+                    <div class="skills-section full-width">
+                        <label>Required Skills</label>
+                        <div class="skills-grid">
+                            <div class="skill-checkbox">
+                                <input type="checkbox" id="cooking">
+                                <label for="cooking">Cooking</label>
+                            </div>
+                            <div class="skill-checkbox">
+                                <input type="checkbox" id="tailoring">
+                                <label for="tailoring">Tailoring</label>
+                            </div>
+                            <div class="skill-checkbox">
+                                <input type="checkbox" id="cleaning">
+                                <label for="cleaning">Cleaning</label>
+                            </div>
+                            <div class="skill-checkbox">
+                                <input type="checkbox" id="domestic">
+                                <label for="domestic">Domestic Work</label>
+                            </div>
+                            <div class="skill-checkbox">
+                                <input type="checkbox" id="construction">
+                                <label for="construction">Construction</label>
+                            </div>
+                            <div class="skill-checkbox">
+                                <input type="checkbox" id="gardening">
+                                <label for="gardening">Gardening</label>
+                            </div>
+                            <div class="skill-checkbox">
+                                <input type="checkbox" id="teaching">
+                                <label for="teaching">Teaching</label>
+                            </div>
+                            <div class="skill-checkbox">
+                                <input type="checkbox" id="childcare">
+                                <label for="childcare">Childcare</label>
+                            </div>
+                            <div class="skill-checkbox">
+                                <input type="checkbox" id="food-service">
+                                <label for="food-service">Food Service</label>
+                            </div>
+                            <div class="skill-checkbox">
+                                <input type="checkbox" id="handicrafts">
+                                <label for="handicrafts">Handicrafts</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-publish">Publish Listing</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Listings Section -->
+        <div id="listings-section" class="listings-container hidden">
+            <div class="listings-header">
+                <h3>My Job Listings</h3>
+                <button class="btn-new">
+                    <span>✚</span> New Listing
+                </button>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <div>
+                        <h4 class="job-title">Community Kitchen Cook</h4>
+                        <div class="job-meta">
+                            <span>📍 Mumbai, Maharashtra</span>
+                            <span>📅 Posted 2024-01-10</span>
+                        </div>
+                    </div>
+                    <span class="status-badge status-active">Active</span>
+                </div>
+
+                <div class="job-details">
+                    <div class="detail-section">
+                        <h4>Work Type</h4>
+                        <div class="detail-value">Monthly</div>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Wage</h4>
+                        <div class="detail-value">₹15,000/month</div>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Applicants</h4>
+                        <div class="detail-value">👥 12</div>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Skills Required</h4>
+                        <div class="skills-tags">
+                            <span class="skill-tag">Cooking</span>
+                            <span class="skill-tag">Food Safety</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-actions">
+                    <button class="btn-action">👁 View Applicants</button>
+                    <button class="btn-action">✏️ Edit</button>
+                    <button class="btn-action">Close Listing</button>
+                    <button class="btn-action btn-delete">🗑 Delete</button>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <div>
+                        <h4 class="job-title">Tailoring Trainer</h4>
+                        <div class="job-meta">
+                            <span>📍 Delhi, India</span>
+                            <span>📅 Posted 2024-01-08</span>
+                        </div>
+                    </div>
+                    <span class="status-badge status-active">Active</span>
+                </div>
+
+                <div class="job-details">
+                    <div class="detail-section">
+                        <h4>Work Type</h4>
+                        <div class="detail-value">Weekly</div>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Wage</h4>
+                        <div class="detail-value">₹8,000/month</div>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Applicants</h4>
+                        <div class="detail-value">👥 7</div>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Skills Required</h4>
+                        <div class="skills-tags">
+                            <span class="skill-tag">Tailoring</span>
+                            <span class="skill-tag">Teaching</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-actions">
+                    <button class="btn-action">👁 View Applicants</button>
+                    <button class="btn-action">✏️ Edit</button>
+                    <button class="btn-action">Close Listing</button>
+                    <button class="btn-action btn-delete">🗑 Delete</button>
+                </div>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <div>
+                        <h4 class="job-title">Cleaning Services</h4>
+                        <div class="job-meta">
+                            <span>📍 Pune, Maharashtra</span>
+                            <span>📅 Posted 2024-01-05</span>
+                        </div>
+                    </div>
+                    <span class="status-badge status-closed">Closed</span>
+                </div>
+
+                <div class="job-details">
+                    <div class="detail-section">
+                        <h4>Work Type</h4>
+                        <div class="detail-value">Daily</div>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Wage</h4>
+                        <div class="detail-value">₹500/day</div>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Applicants</h4>
+                        <div class="detail-value">👥 15</div>
+                    </div>
+                    <div class="detail-section">
+                        <h4>Skills Required</h4>
+                        <div class="skills-tags">
+                            <span class="skill-tag">Cleaning</span>
+                            <span class="skill-tag">Organization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-actions">
+                    <button class="btn-action">👁 View Applicants</button>
+                    <button class="btn-action">✏️ Edit</button>
+                    <button class="btn-action btn-delete">🗑 Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                    <div class="logo">♥</div>
+                    <div>
+                        <h3>ChildProtect</h3>
+                        <p style="margin: 0;">Empowering Parents, Protecting Children</p>
+                    </div>
+                </div>
+                <p>Together, we can create a future where every child has the right to education and a safe childhood. Join our mission to end child labour through skill-based employment opportunities for parents.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#parents">For Parents</a>
+                    <a href="#employers">For NGOs/Employers</a>
+                    <a href="#protection">Child Protection</a>
+                    <a href="#report">Report Incident</a>
+                    <a href="#partners">Our Partners</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <div class="footer-links">
+                    <a href="#privacy">Privacy Policy</a>
+                    <a href="#terms">Terms of Service</a>
+                    <a href="#data">Data Security & Privacy</a>
+                </div>
+                <h3 style="margin-top: 2rem;">Emergency</h3>
+                <p><strong>Child Helpline:</strong> 1098</p>
+                <p><strong>Email:</strong> contact@childprotect.org</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 ChildProtect. All rights reserved. Building a world free from child labour.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showSection(section) {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.closest('.tab').classList.add('active');
+
+            document.getElementById('post-section').classList.add('hidden');
+            document.getElementById('listings-section').classList.add('hidden');
+
+            if (section === 'post') {
+                document.getElementById('post-section').classList.remove('hidden');
+            } else if (section === 'listings') {
+                document.getElementById('listings-section').classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
