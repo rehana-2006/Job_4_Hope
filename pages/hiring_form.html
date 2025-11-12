@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job4Hope - Where Jobs Meet Dreams</title>
+    <link rel="stylesheet" href="../styles/form.css"/>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <div class="logo-icon">♥</div>
+                <div class="logo-text">
+                    <h1>ChildProtect</h1>
+                    <p>Empowering Parents, Protecting Children</p>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#parents">For Parents</a></li>
+                <li><a href="#ngos">For NGOs/Employers</a></li>
+                <li><a href="#protection">Child Protection</a></li>
+                <li><a href="#report">Report Incident</a></li>
+                <li><a href="#partners">Our Partners</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-login">Login</button>
+                <button class="btn-register">Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- form section -->
+    <section>
+    <div class="form-wrapper">
+        <a href="../index.html" class="back-btn">← Back to registration options</a>
+        
+        <div id="successMessage" class="success-message" style="display: none;">
+            ✓ **Success!** Your registration has been submitted and is under review. You will be notified once verified.
+        </div>
+
+        <div class="form-header">
+            <h2>NGO/Employer Registration</h2>
+            <p>Partner with us to post job opportunities and support the mission to end child labour.</p>
+        </div>
+
+        <form id="ngoRegistrationForm">
+            <div class="form-section">
+                <h3 class="section-title">🏢 Organisation Details</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="orgName">Organisation Name <span class="required">*</span></label>
+                        <input type="text" id="orgName" name="orgName" placeholder="Enter full name of organisation" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="orgType">Organisation Type <span class="required">*</span></label>
+                        <select id="orgType" name="orgType" required>
+                            <option value="">Select type</option>
+                            <option value="ngo">NGO</option>
+                            <option value="charity">Charity Foundation</option>
+                            <option value="social">Social Enterprise</option>
+                            <option value="government">Government Agency</option>
+                            <option value="private">Private Company (CSR)</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="description">Organisation Mission/Description <span class="required">*</span></label>
+                    <textarea id="description" name="description" placeholder="Briefly describe your mission and the impact you aim to make..." rows="4" required></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3 class="section-title">📞 Primary Contact Details</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="contactName">Contact Person Name <span class="required">*</span></label>
+                        <input type="text" id="contactName" name="contactName" placeholder="Enter full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="jobTitle">Job Title/Position <span class="required">*</span></label>
+                        <input type="text" id="jobTitle" name="jobTitle" placeholder="e.g., HR Manager" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Contact Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="contact@organisation.org" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="website">Website (Optional)</label>
+                    <input type="url" id="website" name="website" placeholder="https://yourwebsite.com">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3 class="section-title">📍 Location Details</h3>
+                <div class="form-group">
+                    <label for="address">Complete Address <span class="required">*</span></label>
+                    <textarea id="address" name="address" placeholder="Enter street address, building name, area..." rows="3" required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City <span class="required">*</span></label>
+                        <input type="text" id="city" name="city" placeholder="Enter city" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="state">State <span class="required">*</span></label>
+                        <input type="text" id="state" name="state" placeholder="Enter state" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pincode">Pincode <span class="required">*</span></label>
+                        <input type="text" id="pincode" name="pincode" placeholder="Enter pincode" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country <span class="required">*</span></label>
+                        <input type="text" id="country" name="country" value="India" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3 class="section-title">📄 Verification Documents</h3>
+                <div class="form-group">
+                    <label for="documents">Upload Documents (for verification) <span class="required">*</span></label>
+                    <div class="file-input-wrapper">
+                        <input type="file" id="documents" name="documents" class="file-input" required multiple>
+                    </div>
+                    <p class="help-text">Upload registration certificate, tax exemption certificate, or other relevant documents.</p>
+                </div>
+                <div class="verification-note">
+                    <strong>Note:</strong> All partners must be verified to ensure credibility. Document review typically takes 3-5 business days.
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Register Organisation</button>
+        </form>
+
+        <p class="signin-link">
+            Already a verified partner? <a href="login.html">Sign in here</a>
+        </p>
+    </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon">♥</div>
+                        <div class="logo-text">
+                            <h1>ChildProtect</h1>
+                            <p>Empowering Parents, Protecting Children</p>
+                        </div>
+                    </div>
+                    <p>Together, we can create a future where every child has the right to education and a safe childhood. Join our mission to end child labour through skill-based employment opportunities for parents.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./parent.html">For Parents</a></li>
+                        <li><a href="./hiring.html">For NGOs/Employers</a></li>
+                        <li><a href="./protect.html">Child Protection</a></li>
+                        <li><a href="./report.html">Report Incident</a></li>
+                        <li><a href="./partner.html">Our Partners</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Data Security & Privacy</a></li>
+                    </ul>
+                    <div class="emergency-info">
+                        <h4>Emergency</h4>
+                        <p><strong>Child Helpline:</strong> 1098</p>
+                        <p><strong>Email:</strong> contact@childprotect.org</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 ChildProtect. All rights reserved. Building a world free from child labour.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

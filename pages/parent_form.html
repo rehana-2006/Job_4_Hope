@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job4Hope - Where Jobs Meet Dreams</title>
+    <link rel="stylesheet" href="../styles/form.css"/>
+</head>
+<body>
+<!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <div class="logo-icon">♥</div>
+                <div class="logo-text">
+                    <h1>ChildProtect</h1>
+                    <p>Empowering Parents, Protecting Children</p>
+                </div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#parents">For Parents</a></li>
+                <li><a href="#ngos">For NGOs/Employers</a></li>
+                <li><a href="#protection">Child Protection</a></li>
+                <li><a href="#report">Report Incident</a></li>
+                <li><a href="#partners">Our Partners</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="btn-login">Login</button>
+                <button class="btn-register">Register</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- form section -->
+    <section>
+    <div class="form-wrapper">
+        <a href="../index.html" class="back-btn">← Back to registration options</a>
+
+        <div id="successMessage" class="success-message" style="display: none;">
+            ✓ **Success!** Your profile has been created and submitted for review.
+        </div>
+
+        <div class="form-header">
+            <h2>Parent Profile Creation</h2>
+            <p>Tell us about your skills and availability to connect with opportunities.</p>
+        </div>
+
+        <form id="parentProfileForm">
+            <div class="form-section">
+                <h3 class="section-title">Personal Details</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName">Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="youremail@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">City/Location <span class="required">*</span></label>
+                        <input type="text" id="location" name="location" placeholder="City, State/Province" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3 class="section-title">Skills & Experience</h3>
+                <div class="form-group">
+                    <label>Your Skills <span class="required">*</span></label>
+                    <p class="help-text">Select all skills that apply to you.</p>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills" value="cooking"> <span>🍳 Cooking</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills" value="tailoring"> <span>✂️ Tailoring</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills" value="cleaning"> <span>🧹 Cleaning</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills" value="domestic"> <span>🏠 Domestic Work</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills" value="construction"> <span>🔨 Construction</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills" value="gardening"> <span>🌱 Gardening</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills" value="teaching"> <span>📚 Teaching</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills" value="childcare"> <span>👶 Childcare</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills" value="food"> <span>🍽️ Food Service</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="skills" value="handicrafts"> <span>🎨 Handicrafts</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="experience">Work Experience Summary</label>
+                    <textarea id="experience" name="experience" placeholder="Briefly describe your relevant work history and experience (Optional)" rows="4"></textarea>
+                    <p class="help-text">Max 500 characters.</p>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3 class="section-title">Availability</h3>
+                <div class="form-group">
+                    <label>Work Availability <span class="required">*</span></label>
+                    <p class="help-text">When are you available to work?</p>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="availability" value="daily"> <span>Daily (Full Time)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="availability" value="weekly"> <span>Weekly (Part Time)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="availability" value="flexible"> <span>Flexible Hours</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="availability" value="contract"> <span>Contract Basis</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Create Profile</button>
+        </form>
+
+        <p class="signin-link">
+            Already have an account? <a href="login.html">Sign in here</a>
+        </p>
+    </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <div class="logo-icon">♥</div>
+                        <div class="logo-text">
+                            <h1>ChildProtect</h1>
+                            <p>Empowering Parents, Protecting Children</p>
+                        </div>
+                    </div>
+                    <p>Together, we can create a future where every child has the right to education and a safe childhood. Join our mission to end child labour through skill-based employment opportunities for parents.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./parent.html">For Parents</a></li>
+                        <li><a href="./hiring.html">For NGOs/Employers</a></li>
+                        <li><a href="./protect.html">Child Protection</a></li>
+                        <li><a href="./report.html">Report Incident</a></li>
+                        <li><a href="./partner.html">Our Partners</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Data Security & Privacy</a></li>
+                    </ul>
+                    <div class="emergency-info">
+                        <h4>Emergency</h4>
+                        <p><strong>Child Helpline:</strong> 1098</p>
+                        <p><strong>Email:</strong> contact@childprotect.org</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 ChildProtect. All rights reserved. Building a world free from child labour.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
