@@ -181,7 +181,7 @@
             left: 0;
             right: 0;
             height: 5px;
-            background: linear-gradient(90deg, #a4b3f3 0%, #b69bd2 100%);
+            background: linear-gradient(90deg, #f0d6f2 0%, #b69bd2 100%);
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -191,7 +191,7 @@
         }
 
         .role-card:hover {
-            border-color: #667eea;
+            border-color: #e1c9e3;
             transform: translateY(-8px);
             box-shadow: 0 12px 35px rgba(102, 126, 234, 0.2);
             background: white;
@@ -234,7 +234,7 @@
         }
 
         .role-card:hover .btn-role {
-            background: #667eea;
+            background: #8d98c7;
             transform: scale(1.02);
         }
 
