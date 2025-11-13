@@ -240,11 +240,9 @@
             line-height: 2;
         }
 
-        .challenge-image {
-            width: 100%;
-            height: 500px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 15px;
+        .challenge-image img{
+            border-radius:15px;
+            height:500px
         }
 
         /* How We Create Change */
