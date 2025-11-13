@@ -239,24 +239,24 @@
         }
         
         /* Submit Buttons */
+
+        .submit{
+            text-decoration: none;
+        }
         .btn-submit, .btn-create {
             display: block;
             width: 100%;
             padding: 0.85rem;
             margin-top: 1rem;
-            background: var(--primary-color);
-            color: white;
-            border: none;
+            color: rgb(5, 5, 5);
+            border:none;
             border-radius: 6px;
             font-size: 1rem;
             font-weight: 700;
             cursor: pointer;
             transition: background 0.3s;
         }
-
-        .btn-submit:hover, .btn-create:hover {
-            background: var(--secondary-color);
-        }
+        
         /* Footer */
         footer {
             background: #f9f9f9;
