@@ -18,15 +18,20 @@
             padding: 1rem 5%;
             background: white;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .logo {
             display: flex;
             align-items: center;
             gap: 12px;
+            text-decoration: none;
         }
 
-        .logo-icon {
+
+        .logo-icon img {
             width: 50px;
             height: 50px;
             background: #000;
@@ -41,6 +46,7 @@
         .logo-text h1 {
             font-size: 20px;
             font-weight: 600;
+            color: #000;
         }
 
         .logo-text p {
@@ -80,10 +86,6 @@
             color: #333;
         }
 
-        .btn-register {
-            background: #000;
-            color: white;
-        }
 
         /* Hero Section */
         .hero {
@@ -489,16 +491,13 @@
         footer {
             background: #f9f9f9;
             padding: 3rem 5%;
-            border-top: 1px solid #e0e0e0;
         }
 
         .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
+            grid-template-columns: 2fr 1fr 1fr;
             gap: 3rem;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
         .footer-about h3 {
@@ -509,7 +508,6 @@
         .footer-about p {
             color: #666;
             line-height: 1.8;
-            margin-top: 1rem;
         }
 
         .footer-links h4 {
@@ -525,10 +523,6 @@
             text-decoration: none;
             display: block;
             margin-bottom: 0.5rem;
-        }
-
-        .footer-links a:hover {
-            color: #000;
         }
 
         .footer-emergency {
@@ -549,7 +543,6 @@
             border-top: 1px solid #e0e0e0;
             color: #666;
         }
-
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {

@@ -1,42 +1,41 @@
- * {
+* {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         body {
-            
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #333;
         }
 
-        /* Header Styles */
-        header {
-            background-color: white;
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
+        /* Navigation */
+        nav {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-        }
-
-        .logo-section {
-            display: flex;
             align-items: center;
-            gap: 1rem;
+            padding: 1rem 5%;
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .logo {
-            width: 40px;
-            height: 40px;
-            background-color: #1a1a1a;
-            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+
+        .logo-icon img {
+            width: 50px;
+            height: 50px;
+            background: #000;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -44,60 +43,49 @@
             font-size: 24px;
         }
 
-        .brand {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .brand h1 {
-            font-size: 1.5rem;
+        .logo-text h1 {
+            font-size: 20px;
             font-weight: 600;
+            color: #000;
         }
 
-        .brand p {
-            font-size: 0.85rem;
+        .logo-text p {
+            font-size: 12px;
             color: #666;
         }
 
-        nav {
+        .nav-links {
             display: flex;
             gap: 2rem;
-            align-items: center;
+            list-style: none;
         }
 
-        nav a {
+        .nav-links a {
             text-decoration: none;
             color: #333;
-            font-size: 0.95rem;
-            transition: color 0.3s;
+            font-weight: 500;
         }
 
-        nav a:hover {
-            color: #007aff;
-        }
-
-        .auth-buttons {
+        .nav-actions {
             display: flex;
             gap: 1rem;
         }
 
-        .btn-login {
-            padding: 0.5rem 1.5rem;
-            background: transparent;
+        .btn {
+            padding: 0.6rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
             border: none;
             cursor: pointer;
-            font-size: 0.95rem;
+            transition: all 0.3s;
         }
 
-        .btn-register {
-            padding: 0.5rem 1.5rem;
-            background-color: #1a1a1a;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 0.95rem;
+        .btn-login {
+            background: transparent;
+            color: #333;
         }
+
 
         /* Hero Section */
         .hero {
@@ -394,51 +382,60 @@
         }
 
         /* Footer */
+        
         footer {
-            background-color: #f9f9f9;
-            padding: 3rem 2rem 2rem;
-            margin-top: 4rem;
+            background: #f9f9f9;
+            padding: 3rem 5%;
         }
 
         .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
             gap: 3rem;
             margin-bottom: 2rem;
         }
 
-        .footer-section h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
+        .footer-about h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
         }
 
-        .footer-section p {
+        .footer-about p {
             color: #666;
-            line-height: 1.6;
+            line-height: 1.8;
+        }
+
+        .footer-links h4 {
             margin-bottom: 1rem;
         }
 
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
+        .footer-links ul {
+            list-style: none;
         }
 
         .footer-links a {
             color: #666;
             text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
         }
 
-        .footer-links a:hover {
-            color: #007aff;
+        .footer-emergency {
+            margin-top: 2rem;
+        }
+
+        .footer-emergency h4 {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-emergency p {
+            color: #666;
         }
 
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid #e5e5e5;
+            border-top: 1px solid #e0e0e0;
             color: #666;
         }
 
